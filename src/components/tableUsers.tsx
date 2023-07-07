@@ -61,7 +61,8 @@ export default function TableUsers() {
           fullname.toLowerCase().includes(searchLower) ||
           user.username.toLowerCase().includes(searchLower) ||
           user.email.toLowerCase().includes(searchLower) ||
-          user.groupAccess.toLowerCase().includes(searchLower)
+          user.groupAccess.toLowerCase().includes(searchLower) ||
+          dateFormat(user.expiredDate).toLowerCase().includes(searchLower)
         );
       });
 
